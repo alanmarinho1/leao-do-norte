@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Cenas/Menu Principal.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Cenas/Tela Opcoes.unity
+    guid: 9df4325a423a06242b870deb1fbad928
+  - enabled: 1
+    path: Assets/Cenas/Tela Game Over.unity
+    guid: 64787fb453a2b164e9f227861897f4ad
   m_configObjects: {}
