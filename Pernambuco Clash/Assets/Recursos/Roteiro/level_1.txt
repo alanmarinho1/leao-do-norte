@@ -1,0 +1,6 @@
+InimigoSimples::5
+InimigoSimples::5
+InimigoSimples::15
+InimigoSimples::5
+InimigoSimples::5
+InimigoSimples::15

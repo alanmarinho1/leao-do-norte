@@ -15,5 +15,7 @@ namespace inimigo
                 dano *= 1.25f;
             Vida = dano;
         }
+
+        protected new void UpdateAdicional() {}
     }
 }

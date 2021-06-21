@@ -1,10 +1,13 @@
 ﻿using System;
+using mundo;
 using municao;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 namespace inimigo
 {
+    [RequireComponent(typeof(BoxCollider2D))]
+    [RequireComponent(typeof(NavMeshAgent))]
     public abstract class Inimigo : MonoBehaviour
     {
         #region campos
@@ -23,6 +26,7 @@ namespace inimigo
         public float vidaMaxima;
         public float velocidadeBase;
         public float recompensa;
+        public float dano;
         public float defesaBase;
         public GameObject barraVida;
 
@@ -83,8 +87,7 @@ namespace inimigo
             _navMeshAgent.speed = velocidadeBase;
             alvo = GameObject.FindWithTag("Base");
             Debug.Log(transform.position + " -> " +alvo.transform.position);
-            //barraVida.maxValue = vidaMaxima;
-            //barraVida.value = vidaAtual;
+            Base.Instancia.AddInimigo(gameObject);
         }
 
         #endregion
@@ -92,9 +95,8 @@ namespace inimigo
 
         protected void Update()
         {
-            //_navMeshAgent.speed = Velocidade;
             _navMeshAgent.SetDestination(alvo.transform.position);
-            Debug.Log("*");
+            UpdateAdicional();
         }
 
         
@@ -113,5 +115,7 @@ namespace inimigo
             bala.AoAcertar(this);
             AoLevarDano(bala);
         }
+
+        protected void UpdateAdicional(){}
     }
 }
