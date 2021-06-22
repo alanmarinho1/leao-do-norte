@@ -547,12 +547,12 @@ RectTransform:
   m_Children:
   - {fileID: 1649221871}
   m_Father: {fileID: 817731972}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.423, y: 0.25153595}
-  m_AnchorMax: {x: 0.578, y: 0.31373203}
-  m_AnchoredPosition: {x: -0.5, y: 1.1124268}
-  m_SizeDelta: {x: 3, y: -42}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -75.88757}
+  m_SizeDelta: {x: 118, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &661665449
 MonoBehaviour:
@@ -601,6 +601,18 @@ MonoBehaviour:
       - m_Target: {fileID: 882268084}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 699480282}
+        m_TargetAssemblyTypeName: ControleCenas, Assembly-CSharp
+        m_MethodName: NovoJogoScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -724,12 +736,12 @@ RectTransform:
   m_Children:
   - {fileID: 2104825593}
   m_Father: {fileID: 817731972}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.423, y: 0.13373204}
-  m_AnchorMax: {x: 0.578, y: 0.20246406}
-  m_AnchoredPosition: {x: -0.5, y: 0.6000061}
-  m_SizeDelta: {x: 3, y: -44}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -112.7}
+  m_SizeDelta: {x: 118, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &730920034
 MonoBehaviour:
@@ -929,10 +941,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1685474138}
+  - {fileID: 1313158476}
   - {fileID: 661665448}
   - {fileID: 730920033}
   - {fileID: 1805385561}
-  - {fileID: 1313158476}
   - {fileID: 1666500232}
   - {fileID: 1430452970}
   m_Father: {fileID: 0}
@@ -1064,7 +1076,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 882268083}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 403, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1245,12 +1257,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 817731972}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.2983415, y: 0.25153595}
-  m_AnchorMax: {x: 0.69968325, y: 1}
-  m_AnchoredPosition: {x: 0.5, y: 22.747002}
-  m_SizeDelta: {x: 2.6177063, y: 50.619995}
+  m_AnchorMin: {x: 0.3356523, y: 0.3648357}
+  m_AnchorMax: {x: 0.661, y: 1}
+  m_AnchoredPosition: {x: 1, y: 2.7470016}
+  m_SizeDelta: {x: 59.617706, y: 90.619995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1313158477
 MonoBehaviour:
@@ -1458,7 +1470,7 @@ GameObject:
   - component: {fileID: 1540382137}
   - component: {fileID: 1540382136}
   m_Layer: 5
-  m_Name: Musica
+  m_Name: Mute
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1516,7 +1528,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "M\xFAsica"
+  m_Text: Mute
 --- !u!222 &1540382137
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1882,12 +1894,12 @@ RectTransform:
   m_Children:
   - {fileID: 562826889}
   m_Father: {fileID: 817731972}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.423, y: 0.016339868}
-  m_AnchorMax: {x: 0.578, y: 0.08473203}
-  m_AnchoredPosition: {x: -0.5, y: 0.8000183}
-  m_SizeDelta: {x: 3, y: -44}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -150}
+  m_SizeDelta: {x: 118, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1805385562
 MonoBehaviour:
@@ -2176,7 +2188,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &1942778457
 GameObject:
   m_ObjectHideFlags: 0
@@ -2443,7 +2455,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1966550078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 380, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

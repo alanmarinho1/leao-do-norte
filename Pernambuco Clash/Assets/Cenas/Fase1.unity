@@ -13046,6 +13046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tamanho: 2
+  cena: {fileID: 0}
 --- !u!212 &856184848
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13436,7 +13437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7851468468599378877, guid: a37208b8fc2fc634180282658b3a5920, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.1
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 7851468468599378877, guid: a37208b8fc2fc634180282658b3a5920, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13469,6 +13470,10 @@ PrefabInstance:
     - target: {fileID: 7851468468599378879, guid: a37208b8fc2fc634180282658b3a5920, type: 3}
       propertyPath: m_Name
       value: Canhao
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851468468599378879, guid: a37208b8fc2fc634180282658b3a5920, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a37208b8fc2fc634180282658b3a5920, type: 3}

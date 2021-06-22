@@ -7,9 +7,11 @@ public class ControleCenas : MonoBehaviour
 {
     public static ControleCenas instance;
     public GameObject opcoes;
+    
     private void Awake()
     {
-        instance = this;
+        if (instance == null)
+            instance = this;
     }
  
     void Start()
@@ -29,7 +31,7 @@ public class ControleCenas : MonoBehaviour
 
     public void NovoJogoScene()
     {
-        //SceneManager.LoadScene ("Novo Jogo");
+        SceneManager.LoadScene ("Fase1");
     }
 
     public void SairDoJogo(){
@@ -42,5 +44,9 @@ public class ControleCenas : MonoBehaviour
 
     public void VoltarMenuPrincipal(){
         opcoes.SetActive(false);
+    }
+
+    public void GameOverScene(){
+        Application.LoadLevel("Tela Game Over");
     }
 }

@@ -27,6 +27,7 @@ namespace mundo
         #region campos
 
         public float tamanho;
+        public ControleCenas cena;
         private LinkedList<GameObject> inimigos = new LinkedList<GameObject>();
         public LinkedList<GameObject> Inimigos => inimigos;
         #endregion
@@ -42,6 +43,7 @@ namespace mundo
                 foreach (var go in inimigos.Where(go =>
                     Vector3.Distance(transform.position, go.transform.position) < tamanho))
                 {
+                    
                     Invade(go);
                     inimigos.Remove(go);
                     Destroy(go);
@@ -50,14 +52,14 @@ namespace mundo
             }
             catch (Exception)
             {}
+
         }
 
         protected void Invade(GameObject go)
         {
             if (!go.CompareTag("Inimigo")) return;
             var inimigo = go.GetComponent<Inimigo>();
-            Debug.Log("dano causado = " +inimigo.dano);
-            
+            Debug.Log("dano causado = " +inimigo.dano);  
         }
     }
 }
