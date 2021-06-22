@@ -35,13 +35,16 @@ namespace inimigo
             get => vidaAtual;
             set
             {
+                Debug.Log("com" + vidaAtual + ", daninho de " + value);
                 vidaAtual -= value;
+                Debug.Log("vida =" + vidaAtual);
                 if (vidaAtual >= vidaMaxima) vidaAtual = vidaMaxima;
                 if (vidaAtual < 0)
                 {
                     vidaAtual = 0;
                     Morrer();
                 }
+                Debug.Log("vida =" + vidaAtual);
 
                 var vec = barraVida.transform.localScale;
                 barraVida.transform.localScale = new Vector3(vidaAtual / vidaMaxima, vec.y, vec.z );
@@ -81,6 +84,7 @@ namespace inimigo
 
         protected void Start()
         {
+            vidaAtual = vidaMaxima;
             _navMeshAgent = GetComponent<NavMeshAgent>();
             _navMeshAgent.updateRotation = false;
             _navMeshAgent.updateUpAxis = false;
@@ -103,17 +107,20 @@ namespace inimigo
         private void Morrer()
         {
             AoMorrer();
-            if(vidaAtual <= 0)
-                Destroy(gameObject);
+            if (!(vidaAtual <= 0)) return;
+            Base.Instancia.Inimigos.Remove(gameObject);
+            Destroy(gameObject);
         }
 
-        private void OnCollisionEnter(Collision other)
+        private void OnCollisionEnter2D(Collision2D other)
         {
+            Debug.Log(other.gameObject.name);
             var go = other.gameObject;
             if (!go.CompareTag("Bala")) return;
             var bala = go.GetComponent<Bala>();
             bala.AoAcertar(this);
             AoLevarDano(bala);
+            Destroy(go);
         }
 
         protected void UpdateAdicional(){}

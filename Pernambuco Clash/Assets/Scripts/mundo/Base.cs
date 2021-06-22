@@ -28,7 +28,7 @@ namespace mundo
 
         public float tamanho;
         private LinkedList<GameObject> inimigos = new LinkedList<GameObject>();
-
+        public LinkedList<GameObject> Inimigos => inimigos;
         #endregion
 
         public void AddInimigo(GameObject go)
@@ -37,13 +37,19 @@ namespace mundo
         }
         protected void Update()
         {
-            foreach (var go in inimigos.Where(go => Vector3.Distance(transform.position, go.transform.position) < tamanho))
+            try
             {
-                Invade(go);
-                inimigos.Remove(go);
-                Destroy(go);
-                break;
+                foreach (var go in inimigos.Where(go =>
+                    Vector3.Distance(transform.position, go.transform.position) < tamanho))
+                {
+                    Invade(go);
+                    inimigos.Remove(go);
+                    Destroy(go);
+                    break;
+                }
             }
+            catch (Exception)
+            {}
         }
 
         protected void Invade(GameObject go)

@@ -34,6 +34,7 @@ namespace mundo
 
         protected void Gerar()
         {
+            if(index >= _instanciacao.Length) return;
             if(_instanciacao[index].prefab == null) return;
             var prefab = Instantiate(_instanciacao[index].prefab);
             prefab.transform.position = local.transform.position;
