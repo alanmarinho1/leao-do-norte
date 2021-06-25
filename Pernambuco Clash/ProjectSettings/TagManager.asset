@@ -7,6 +7,8 @@ TagManager:
   - Base
   - Inimigo
   - Bala
+  - "Espa\xE7o"
+  - Arma
   layers:
   - Default
   - TransparentFX

@@ -15,29 +15,42 @@ namespace municao
         public float velocidadeBase;
         public string tipo;
         public float tempoVida;
+        public bool fixo = false;
+        protected bool X,Y;
         #endregion
 
         public abstract void AoAcertar(Inimigo alvo);
 
         protected void Update()
         {
-            tempoVida -= Time.deltaTime;
-            if(tempoVida <= 0)
+            if(Tick() || !fixo && alvo == null)
                 Destroy(gameObject);
-            if (alvo == null) return;
+            Redireciona();
+            Movimentar();
+        }
+
+        protected bool Tick()
+        {
+            tempoVida -= Time.deltaTime;
+            return tempoVida <= 0;
+        }
+
+        protected abstract void Redireciona();
+        protected void Direciona()
+        {
             var local = alvo.transform.position;
             var pos = transform.position;
-            var movimento = Vector3.zero;
-            if (pos.x > local.x)
-                movimento.x = -1 *Time.deltaTime * velocidadeBase;
-            else if (pos.x < local.x)
-                movimento.x = 1*Time.deltaTime * velocidadeBase;
-            if (pos.y > local.y)
-                movimento.y = -1*Time.deltaTime * velocidadeBase;
-            else if (pos.y < local.y)
-                movimento.y = 1*Time.deltaTime * velocidadeBase;
-
-            transform.position += movimento;
+            X = pos.x > local.x;
+            Y = pos.y > local.y;
         }
+
+        protected void Movimento()
+        {
+            transform.position += new Vector3(velocidadeBase * Time.deltaTime * (X ? -1 : 1),
+                velocidadeBase * Time.deltaTime * (Y ? -1 : 1), 0);
+        }
+
+        protected abstract void Movimentar();
+
     }
 }

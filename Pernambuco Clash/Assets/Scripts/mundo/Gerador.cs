@@ -12,7 +12,7 @@ namespace mundo
         [Header("Configuração do nivel")]
         [Tooltip("Local de onde onde os inimigos serão instanciados")]
         public GameObject local;
-        [HideInInspector]
+        //[HideInInspector]
         public int index;
 
         [Header("Configuração dos inimigos")]

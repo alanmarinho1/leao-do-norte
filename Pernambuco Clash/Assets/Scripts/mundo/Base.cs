@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using inimigo;
+using loja;
 using UnityEngine;
+using UnityEngine.UI;
+using Random = System.Random;
 
 namespace mundo
 {
     [DisallowMultipleComponent]
     [RequireComponent(typeof(Gerador))]
+    [RequireComponent(typeof(Controlador))]
+    [RequireComponent(typeof(Loja))]
     public class Base : MonoBehaviour
     {
         #region singleton
@@ -23,14 +28,48 @@ namespace mundo
         }
 
         #endregion
-
         #region campos
+        #region Texto
+
+        public Text texto_grana;
+        
+        #endregion
+        
 
         public float tamanho;
+        public float grana;
+        public float vida;
+
+        public float Vida
+        {
+            set
+            {
+                vida -= value;
+                if(vida <= 0)
+                    AoMorrer();
+            }
+        }
+        public float Grana
+        {
+            get => grana;
+            set
+            {
+                grana += value;
+                if (grana <= 0)
+                    grana = 0;
+                texto_grana.text = grana + " kg de açucar";
+            }
+        }
+        public Random rng = new Random();
         public ControleCenas cena;
         private LinkedList<GameObject> inimigos = new LinkedList<GameObject>();
         public LinkedList<GameObject> Inimigos => inimigos;
         #endregion
+
+        private void Start()
+        {
+            Grana = 0;
+        }
 
         public void AddInimigo(GameObject go)
         {
@@ -43,23 +82,29 @@ namespace mundo
                 foreach (var go in inimigos.Where(go =>
                     Vector3.Distance(transform.position, go.transform.position) < tamanho))
                 {
-                    
                     Invade(go);
-                    inimigos.Remove(go);
-                    Destroy(go);
-                    break;
                 }
             }
             catch (Exception)
-            {}
+            {
+                // ignored
+            }
+        }
 
+        //TODO
+        protected void AoMorrer()
+        {
+            
         }
 
         protected void Invade(GameObject go)
         {
             if (!go.CompareTag("Inimigo")) return;
             var inimigo = go.GetComponent<Inimigo>();
-            Debug.Log("dano causado = " +inimigo.dano);  
+            Vida = inimigo.dano;
+            Grana = inimigo.recompensa;
+            inimigos.Remove(go);
+            Destroy(go);
         }
     }
 }

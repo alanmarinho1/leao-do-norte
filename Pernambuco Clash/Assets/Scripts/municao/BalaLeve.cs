@@ -15,6 +15,16 @@ namespace municao
         {
             if (alvo.defesaBase - alvo.Defesa < 5)
                 alvo.Defesa = 1;
+            //Destroy(gameObject);
+        }
+
+        protected override void Redireciona()
+        {
+            Direciona();
+        }
+        protected override void Movimentar()
+        {
+            Movimento();
         }
     }
 }
