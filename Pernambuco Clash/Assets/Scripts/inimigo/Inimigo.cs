@@ -19,7 +19,7 @@ namespace inimigo
         private float vidaAtual;
         private float velocidadeAtual;
         private float defesaAtual;
-        
+
         #endregion
         #region publicas
 
@@ -29,6 +29,7 @@ namespace inimigo
         public float dano;
         public float defesaBase;
         public GameObject barraVida;
+        public Animator anim;
 
         public float Vida
         {
@@ -93,16 +94,17 @@ namespace inimigo
             alvo = GameObject.FindWithTag("Base");
             Debug.Log(transform.position + " -> " +alvo.transform.position);
             Base.Instancia.AddInimigo(gameObject);
+            anim = GetComponent<Animator>();
         }
 
         #endregion
         
-
         protected void Update()
         {
             _navMeshAgent.speed = velocidadeAtual;
             _navMeshAgent.SetDestination(alvo.transform.position);
             UpdateAdicional();
+            soldierMove();            
         }
 
         
@@ -126,5 +128,57 @@ namespace inimigo
         }
 
         protected void UpdateAdicional(){}
+
+        protected void soldierMove()
+        {
+
+            anim.ResetTrigger("RightDown");
+            anim.ResetTrigger("RightUp");
+            anim.ResetTrigger("LeftDown");
+            anim.ResetTrigger("LeftUp");
+            anim.ResetTrigger("Down");
+            anim.ResetTrigger("Up");
+
+            if (transform.position.x < -1 && transform.position.y > 0.47) // comparar com posicao do canhao
+            {
+                anim.SetTrigger("RightDown");
+            }
+
+            if (transform.position.x < -1 && transform.position.y < 0.47) // comparar com posicao do canhao
+            {
+                anim.SetTrigger("RightUp");
+            }
+
+            if (transform.position.x > 1 && transform.position.x < 3 && transform.position.y > 0.47) // comparar com posicao do canhao
+            {
+                anim.SetTrigger("LeftDown");
+            }
+
+            if (transform.position.x > 1 && transform.position.x < 3 && transform.position.y < 0.47) // comparar com posicao do canhao
+            {
+                anim.SetTrigger("LeftUp");
+            }
+
+            if (transform.position.x > -1 && transform.position.x < 1 && transform.position.y > 0.47) // comparar com posicao do canhao
+            {
+                anim.SetTrigger("Down");
+            }
+
+            if (transform.position.x > -1 && transform.position.x < 1 && transform.position.y < 0.47) // comparar com posicao do canhao
+            {
+                anim.SetTrigger("Up");
+            }
+
+            if (transform.position.x > 3 && transform.position.x < 6.2)
+            {
+                anim.SetTrigger("RightDown");
+            }
+
+            if (transform.position.x > 6.2)
+            {
+                _navMeshAgent.speed = 0;                
+                anim.SetTrigger("RightDown");
+            }
+        }
     }
 }
