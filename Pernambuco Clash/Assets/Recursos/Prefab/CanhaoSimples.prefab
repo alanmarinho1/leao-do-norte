@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7851468468599378877}
   - component: {fileID: 7851468468599378876}
   - component: {fileID: 6950715691445578400}
+  - component: {fileID: -2199902778441184319}
   m_Layer: 0
   m_Name: CanhaoSimples
   m_TagString: Untagged
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2747690628134850419, guid: 16037dbd798344f57a526d53d48f5ead, type: 3}
+  m_Sprite: {fileID: 5652476734841691633, guid: f36907bf341db9244af4be12df898b72, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -105,3 +106,22 @@ MonoBehaviour:
   crescimentoPreco: 100
   crescimentoDano: 0.5
   cresimentoCadencia: 0.2
+--- !u!95 &-2199902778441184319
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7851468468599378879}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d190722c4ae23d0489c5ff69d5b0f9ee, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
