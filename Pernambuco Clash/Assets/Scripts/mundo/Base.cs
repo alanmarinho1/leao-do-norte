@@ -57,7 +57,7 @@ namespace mundo
                 grana += value;
                 if (grana <= 0)
                     grana = 0;
-                texto_grana.text = grana + " kg de açucar";
+                texto_grana.text = Convert.ToString(grana);
             }
         }
         public Random rng = new Random();
@@ -94,7 +94,7 @@ namespace mundo
         //TODO
         protected void AoMorrer()
         {
-            
+            cena.GameOverScene();
         }
 
         protected void Invade(GameObject go)
