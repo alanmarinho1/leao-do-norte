@@ -92,9 +92,10 @@ namespace inimigo
             velocidadeAtual = velocidadeBase;
             _navMeshAgent.speed = velocidadeBase;
             alvo = GameObject.FindWithTag("Base");
-            Debug.Log(transform.position + " -> " +alvo.transform.position);
             Base.Instancia.AddInimigo(gameObject);
             anim = GetComponent<Animator>();
+            vidaAtual = vidaMaxima;
+            Vida = 0;
         }
 
         #endregion
@@ -112,13 +113,14 @@ namespace inimigo
         {
             AoMorrer();
             if (!(vidaAtual <= 0)) return;
+            Base.Instancia.Grana = recompensa;
             Base.Instancia.Inimigos.Remove(gameObject);
             Destroy(gameObject);
         }
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            Debug.Log(other.gameObject.name);
+            //Debug.Log(other.gameObject.name);
             var go = other.gameObject;
             if (!go.CompareTag("Bala")) return;
             var bala = go.GetComponent<Bala>();

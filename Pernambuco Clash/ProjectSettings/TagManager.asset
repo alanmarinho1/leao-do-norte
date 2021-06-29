@@ -9,6 +9,8 @@ TagManager:
   - Bala
   - "Espa\xE7o"
   - Arma
+  - MiniMenu
+  - Menu
   layers:
   - Default
   - TransparentFX

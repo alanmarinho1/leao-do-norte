@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography;
 using inimigo;
 using loja;
 using UnityEngine;
@@ -58,6 +57,7 @@ namespace mundo
                 if (grana <= 0)
                     grana = 0;
                 texto_grana.text = Convert.ToString(grana);
+                Debug.Log("minha grana é de [" + grana + "]" );
             }
         }
         public Random rng = new Random();
@@ -69,6 +69,7 @@ namespace mundo
         private void Start()
         {
             Grana = 0;
+            Time.timeScale = 3f;
         }
 
         public void AddInimigo(GameObject go)
@@ -102,7 +103,7 @@ namespace mundo
             if (!go.CompareTag("Inimigo")) return;
             var inimigo = go.GetComponent<Inimigo>();
             Vida = inimigo.dano;
-            Grana = inimigo.recompensa;
+            //Grana = inimigo.recompensa;
             inimigos.Remove(go);
             Destroy(go);
         }

@@ -23,8 +23,11 @@ namespace municao
 
         protected void Update()
         {
-            if(Tick() || !fixo && alvo == null)
+            if (Tick() || !fixo && alvo == null)
+            {
                 Destroy(gameObject);
+                return;
+            }
             Redireciona();
             Movimentar();
         }
