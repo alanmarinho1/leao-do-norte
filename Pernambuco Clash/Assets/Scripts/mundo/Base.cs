@@ -84,6 +84,7 @@ namespace mundo
                     Vector3.Distance(transform.position, go.transform.position) < tamanho))
                 {
                     Invade(go);
+                    //cena.GameOverScene();
                 }
             }
             catch (Exception)
@@ -104,8 +105,10 @@ namespace mundo
             var inimigo = go.GetComponent<Inimigo>();
             Vida = inimigo.dano;
             //Grana = inimigo.recompensa;
+            Debug.Log("A base sofreu [" + inimigo.dano + "] de dano" );
             inimigos.Remove(go);
             Destroy(go);
+            cena.GameOverScene();
         }
     }
 }
