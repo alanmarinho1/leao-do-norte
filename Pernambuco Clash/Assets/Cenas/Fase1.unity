@@ -6036,6 +6036,7 @@ MonoBehaviour:
   crescimentoPreco: 0
   crescimentoDano: 0
   cresimentoCadencia: 0
+  anim: {fileID: 0}
   passo: 0
   cadenciaInicial: 0
   velocidadeMinima: 0
@@ -23471,12 +23472,20 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7851468468599378877, guid: a37208b8fc2fc634180282658b3a5920, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851468468599378877, guid: a37208b8fc2fc634180282658b3a5920, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851468468599378877, guid: a37208b8fc2fc634180282658b3a5920, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 7851468468599378877, guid: a37208b8fc2fc634180282658b3a5920, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.47
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 7851468468599378877, guid: a37208b8fc2fc634180282658b3a5920, type: 3}
       propertyPath: m_LocalPosition.z

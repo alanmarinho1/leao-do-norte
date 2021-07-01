@@ -141,41 +141,20 @@ namespace inimigo
             anim.ResetTrigger("Down");
             anim.ResetTrigger("Up");
 
-            if (transform.position.x < -1 && transform.position.y > 0.47) // comparar com posicao do canhao
-            {
-                anim.SetTrigger("RightDown");
-            }
+            if (transform.position.x < -1 && transform.position.y > 0.47) anim.SetTrigger("RightDown"); // comparar com posicao do canhao
+            
+            if (transform.position.x < -1 && transform.position.y < 0.47) anim.SetTrigger("RightUp"); // comparar com posicao do canhao
+            
+            if (transform.position.x > 1 && transform.position.x < 3 && transform.position.y > 0.47) anim.SetTrigger("LeftDown"); // comparar com posicao do canhao
 
-            if (transform.position.x < -1 && transform.position.y < 0.47) // comparar com posicao do canhao
-            {
-                anim.SetTrigger("RightUp");
-            }
-
-            if (transform.position.x > 1 && transform.position.x < 3 && transform.position.y > 0.47) // comparar com posicao do canhao
-            {
-                anim.SetTrigger("LeftDown");
-            }
-
-            if (transform.position.x > 1 && transform.position.x < 3 && transform.position.y < 0.47) // comparar com posicao do canhao
-            {
-                anim.SetTrigger("LeftUp");
-            }
-
-            if (transform.position.x > -1 && transform.position.x < 1 && transform.position.y > 0.47) // comparar com posicao do canhao
-            {
-                anim.SetTrigger("Down");
-            }
-
-            if (transform.position.x > -1 && transform.position.x < 1 && transform.position.y < 0.47) // comparar com posicao do canhao
-            {
-                anim.SetTrigger("Up");
-            }
-
-            if (transform.position.x > 3 && transform.position.x < 6.2)
-            {
-                anim.SetTrigger("RightDown");
-            }
-
+            if (transform.position.x > 1 && transform.position.x < 3 && transform.position.y < 0.47) anim.SetTrigger("LeftUp");// comparar com posicao do canhao
+            
+            if (transform.position.x > -1 && transform.position.x < 1 && transform.position.y > 0.47) anim.SetTrigger("Down"); // comparar com posicao do canhao
+            
+            if (transform.position.x > -1 && transform.position.x < 1 && transform.position.y < 0.47) anim.SetTrigger("Up"); // comparar com posicao do canhao
+            
+            if (transform.position.x > 3 && transform.position.x < 6.2) anim.SetTrigger("RightDown");
+            
             if (transform.position.x > 6.2)
             {
                 _navMeshAgent.speed = 0;                

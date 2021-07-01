@@ -19,6 +19,7 @@ namespace arma
         public float crescimentoPreco;
         public float crescimentoDano;
         public float cresimentoCadencia;
+        public Animator anim;
         private int nivel;
 
         protected GameObject alvo;
@@ -26,12 +27,14 @@ namespace arma
         private void Start()
         {
             tempo = cadencia;
+            anim = GetComponent<Animator>();
         }
 
         private void Update()
         {
             if (!Tick()) return;
             if (ChecaAlvo()){
+                miraAlvo();
                 AoAtirar();
                 Dispara();
                 tempo = cadencia;
@@ -93,6 +96,29 @@ namespace arma
             if (cadencia <= 0)
                 cadencia = 0.1f;
             return true;
+        }
+
+        public void miraAlvo()
+        {
+
+            anim.ResetTrigger("CannonRightDown");
+            anim.ResetTrigger("CannonRightUp");
+            anim.ResetTrigger("CannonLeftDown");
+            anim.ResetTrigger("CannonLeftUp");
+            anim.ResetTrigger("CannonDown");
+            anim.ResetTrigger("CannonUp");
+
+            if (alvo.transform.position.x < -1 && alvo.transform.position.y > 0) anim.SetTrigger("CannonLeftUp");
+
+            if (alvo.transform.position.x < -1 && alvo.transform.position.y < 0) anim.SetTrigger("CannonLeftDown");
+
+            if (alvo.transform.position.x > 1 && alvo.transform.position.y > 0) anim.SetTrigger("CannonRightUp");
+
+            if (alvo.transform.position.x > 1 && alvo.transform.position.y < 0) anim.SetTrigger("CannonRightDown");
+
+            if (alvo.transform.position.x > -1 && alvo.transform.position.x < 1 && alvo.transform.position.y > 0) anim.SetTrigger("CannonUp");
+
+            if (alvo.transform.position.x > -1 && alvo.transform.position.x < 1 && alvo.transform.position.y < 0) anim.SetTrigger("CannonDown");
         }
     }
 }
