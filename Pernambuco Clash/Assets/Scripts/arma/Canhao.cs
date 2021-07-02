@@ -40,7 +40,7 @@ namespace arma
                 tempo = cadencia;
             }
             else
-                Localiza();
+                Localizar();
         }
 
         protected bool Tick()
@@ -56,7 +56,8 @@ namespace arma
         }
 
         protected abstract void Dispara();
-        protected void Localiza()
+        protected abstract void Localizar();
+        protected void LocalizaMaisProximo()
         {
             var inimigos = Base.Instancia.Inimigos.Where(i => Vector3.Distance(i.transform.position, transform.position) < alcance);
             if(!inimigos.Any()) return;
@@ -68,6 +69,24 @@ namespace arma
                 dis = Vector3.Distance(inimigo.transform.position, transform.position);
                 if (!(dis < min)) continue;
                 min = dis;
+                ini = inimigo;
+            }
+
+            alvo = ini;
+        }
+        
+        protected void LocalizaMaisVida()
+        {
+            var inimigos = Base.Instancia.Inimigos.Where(i => Vector3.Distance(i.transform.position, transform.position) < alcance);
+            if(!inimigos.Any()) return;
+            AoMudarAlvo();
+            GameObject ini = null;
+            float max = 0f,val;
+            foreach (var inimigo in inimigos)
+            {
+                val = inimigo.GetComponent<Inimigo>().Vida;
+                if (!(val > max)) continue;
+                max = val;
                 ini = inimigo;
             }
 

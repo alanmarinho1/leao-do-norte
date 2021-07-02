@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using inimigo;
+using Unity.Collections;
 using UnityEngine;
 
 namespace mundo
@@ -16,10 +17,17 @@ namespace mundo
         public int index;
 
         [Header("Configuração dos inimigos")]
+        [Tooltip("Caminho pro arquivo de criação de monstro")]
+        public string caminho;
+        
         [Tooltip("lista de inimigos que serão instanciados bem como tempo para o proximo")]
+        [ReadOnly]
         public Instanciacao[] _instanciacao;
+
+        
         private void Start()
         {
+            _instanciacao = Instanciacao.ApartirDeArquivo(caminho);
             index = 0;
             Gerar();
         }

@@ -14,6 +14,11 @@ namespace arma
             BalaDeCanhao(go);
         }
 
+        protected override void Localizar()
+        {
+            LocalizaMaisProximo();
+        }
+
         protected override void AoAtirar(){}
         protected override void AoMudarAlvo(){}
         protected override void AoMelhorar(){}

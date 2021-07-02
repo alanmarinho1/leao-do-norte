@@ -14,6 +14,11 @@
             BalaDeCanhao(go);
         }
 
+        protected override void Localizar()
+        {
+            LocalizaMaisVida();
+        }
+
         protected override void AoAtirar()
         {
             cadencia -= passo;

@@ -21,6 +21,11 @@ namespace arma
             }
         }
 
+        protected override void Localizar()
+        {
+            LocalizaMaisProximo();
+        }
+
         protected override void AoAtirar(){}
         protected override void AoMudarAlvo(){ }
         protected override void AoMelhorar()

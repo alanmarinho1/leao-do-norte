@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using arma;
+using inimigo;
 using mundo;
 using UnityEngine;
 
@@ -27,6 +28,8 @@ namespace loja
         public Canhao canhaoRajada;
         public Canhao canhaoMetralhadora;
 
+        
+        
         public Canhao GetPrefab(int n)
         {
             return n switch

@@ -1,4 +1,8 @@
 ﻿using System;
+using System.IO;
+using System.Linq;
+using loja;
+using UnityEditor;
 using UnityEngine;
 
 namespace mundo
@@ -8,6 +12,25 @@ namespace mundo
     {
         public GameObject prefab;
         public float tempo;
+
+        public Instanciacao(string str)
+        {
+            var partes = str.Split(new []{"::"},StringSplitOptions.RemoveEmptyEntries);
+            tempo = int.Parse(partes[1]);
+            prefab = FabaricaInimigo.Instancia.GetInimigo(partes[0]).gameObject;
+        }
+        
+          
+
+        public static Instanciacao[] ApartirDeArquivo(string str)
+        {
+            var lines = System.IO.File.ReadAllLines("Assets/Recursos/Roteiro/" + str).Where(lines=>lines.Length > 2).ToArray();
+            var len = lines.Count();
+            var vec = new Instanciacao[len];
+            for (var i = 0; i < len; i++)
+                vec[i] = new Instanciacao(lines[i]);
+            return vec;
+        }
         public bool tick()
         {
             tempo -= Time.deltaTime;
