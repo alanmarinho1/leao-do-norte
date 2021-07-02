@@ -22,7 +22,7 @@ namespace arma
         public Animator anim;
         private int nivel;
 
-        protected GameObject alvo;
+        protected GameObject alvo = null;
 
         private void Start()
         {
@@ -107,6 +107,7 @@ namespace arma
             anim.ResetTrigger("CannonLeftUp");
             anim.ResetTrigger("CannonDown");
             anim.ResetTrigger("CannonUp");
+            
 
             if (alvo.transform.position.x < -1 && alvo.transform.position.y > 0) anim.SetTrigger("CannonLeftUp");
 
