@@ -20,7 +20,7 @@ namespace mundo
         public Inimigo inimigoGrande;
         public Inimigo inimigoPequeno;
         public Inimigo inimigoRapido;
-
+        public Inimigo inimigoChefe;
         public Inimigo GetInimigo(string str)
         {
             return str switch
@@ -29,6 +29,7 @@ namespace mundo
                 "grande" => inimigoGrande,
                 "pequeno" => inimigoPequeno,
                 "rapido" => inimigoRapido,
+                "chefe" => inimigoChefe,
                 _ => null
             };
         }

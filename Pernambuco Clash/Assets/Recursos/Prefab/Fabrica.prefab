@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inimigoSimples: {fileID: 2642855020738979204, guid: 70bdcb6630435234f8510c4d828715f1, type: 3}
-  inimigoGrande: {fileID: 0}
-  inimigoPequeno: {fileID: 0}
-  inimigoRapido: {fileID: 0}
+  inimigoGrande: {fileID: 4332380072572855315, guid: df80a9e6623c8ee45adc54bf4798f26f, type: 3}
+  inimigoPequeno: {fileID: 3890782131948917345, guid: 551fafc7324826b4f95c3eb41736b6e6, type: 3}
+  inimigoRapido: {fileID: 5540851175848365275, guid: 9304ae15821a389499025abbfde544ad, type: 3}
+  inimigoChefe: {fileID: 0}

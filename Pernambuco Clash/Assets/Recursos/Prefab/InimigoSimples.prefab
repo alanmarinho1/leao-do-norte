@@ -237,10 +237,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaMaxima: 10
   velocidadeBase: 2
-  recompensa: 5
+  recompensa: 20
   dano: 0
   defesaBase: 1
   barraVida: {fileID: 2642855020497006216}
+  anim: {fileID: 0}
 --- !u!61 &2642855020738979200
 BoxCollider2D:
   m_ObjectHideFlags: 0
