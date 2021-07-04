@@ -57,7 +57,7 @@ namespace mundo
                 if (grana <= 0)
                     grana = 0;
                 texto_grana.text = Convert.ToString(grana);
-                Debug.Log("minha grana é de [" + grana + "]" );
+                // Debug.Log("minha grana é de [" + grana + "]" );
             }
         }
         public Random rng = new Random();
