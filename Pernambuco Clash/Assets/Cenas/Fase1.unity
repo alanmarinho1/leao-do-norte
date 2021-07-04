@@ -5429,6 +5429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   painel: {fileID: 1497574541}
+  audioSource: {fileID: 1712957039}
 --- !u!61 &27144313
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5552,6 +5553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   painel: {fileID: 2054822262}
+  audioSource: {fileID: 1712957039}
 --- !u!61 &76455318
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5656,7 +5658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1563758080764338643, guid: fd43912e5e8411c4ab108f4d43c3810c, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 1563758080764338643, guid: fd43912e5e8411c4ab108f4d43c3810c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5940,6 +5942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   painel: {fileID: 1458713172}
+  audioSource: {fileID: 1712957039}
 --- !u!61 &214021619
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15708,7 +15711,7 @@ GameObject:
   m_Component:
   - component: {fileID: 863384604}
   m_Layer: 0
-  m_Name: Espaco (10)
+  m_Name: Espaco (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15728,7 +15731,7 @@ Transform:
   - {fileID: 76455320}
   - {fileID: 2054822263}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &887013078
 GameObject:
@@ -15968,6 +15971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   painel: {fileID: 538116305}
+  audioSource: {fileID: 1712957039}
 --- !u!61 &990517380
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16174,6 +16178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   painel: {fileID: 807076107}
+  audioSource: {fileID: 1712957039}
 --- !u!61 &1034152192
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17131,7 +17136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1563758080764338643, guid: fd43912e5e8411c4ab108f4d43c3810c, type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 1563758080764338643, guid: fd43912e5e8411c4ab108f4d43c3810c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17185,7 +17190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1288770868}
   m_Layer: 0
-  m_Name: Espaco (6)
+  m_Name: Espaco (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17729,7 +17734,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 48f9ce386c4ba864ebe683443ff9d862, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.179
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -18058,7 +18063,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1563758080764338643, guid: fd43912e5e8411c4ab108f4d43c3810c, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1563758080764338643, guid: fd43912e5e8411c4ab108f4d43c3810c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19269,6 +19274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   painel: {fileID: 1045695748}
+  audioSource: {fileID: 1712957039}
 --- !u!61 &1844339436
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19392,6 +19398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   painel: {fileID: 1384703542}
+  audioSource: {fileID: 1712957039}
 --- !u!61 &1850356400
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19947,7 +19954,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1563758080764338643, guid: fd43912e5e8411c4ab108f4d43c3810c, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 1563758080764338643, guid: fd43912e5e8411c4ab108f4d43c3810c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20174,7 +20181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2045702165}
   m_Layer: 0
-  m_Name: Espaco (9)
+  m_Name: Espaco (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20194,7 +20201,7 @@ Transform:
   - {fileID: 27144315}
   - {fileID: 1497574542}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2054822262
 GameObject:

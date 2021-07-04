@@ -68,6 +68,6 @@ public class ControleCenas : MonoBehaviour
 
     public void GameOverScene()
     {
-        Application.LoadLevel("Tela Game Over");
+        SceneManager.LoadScene("Tela Game Over");
     }
 }

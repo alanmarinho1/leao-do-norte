@@ -7,6 +7,7 @@ namespace loja
     {
         //greatest outcast
         public GameObject painel;
+        public AudioSource clickSound;
 
         private void Start()
         {
@@ -15,6 +16,7 @@ namespace loja
 
         public override void Click()
         {
+            clickSound.Play(0);
             var aberto = painel.activeInHierarchy;
             foreach (var go in GameObject.FindGameObjectsWithTag("Menu"))
             {
