@@ -5,10 +5,10 @@ using UnityEngine;
 namespace mundo
 {
     [DisallowMultipleComponent]
-    public class FabaricaInimigo : MonoBehaviour
+    public class FabricaInimigo : MonoBehaviour
     {
-        private static FabaricaInimigo _intancia;
-        public static FabaricaInimigo Instancia => _intancia;
+        private static FabricaInimigo _intancia;
+        public static FabricaInimigo Instancia => _intancia;
 
         private void Awake()
         {

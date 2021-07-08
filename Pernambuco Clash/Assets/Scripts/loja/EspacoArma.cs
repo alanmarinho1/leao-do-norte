@@ -1,4 +1,5 @@
 ﻿using System;
+using arma;
 using UnityEngine;
 
 namespace loja
@@ -6,38 +7,32 @@ namespace loja
     public class EspacoArma : Espaco
     {
         //greatest outcast
-        public GameObject painel;
         public AudioSource clickSound;
-
+        public int stick = -1;
+        public Canhao canhao;
         private void Start()
         {
-            painel.SetActive(false);
         }
 
         public override void Click()
         {
             clickSound.Play(0);
-            var aberto = painel.activeInHierarchy;
-            foreach (var go in GameObject.FindGameObjectsWithTag("Menu"))
-            {
-                go.SetActive(false);
-                for (var n=0;n<go.transform.childCount;n++)
-                {
-                    go.transform.GetChild(n).gameObject.SetActive(false);
-                }
-            }
-            painel.SetActive(!aberto);
-            for (var n=0;n<painel.transform.childCount;n++)
-            {
-                painel.transform.GetChild(n).gameObject.SetActive(!aberto);
-            }
+            var miniMenu = stick == -1 ? Loja.Instancia.painelArma : Loja.Instancia.painelEvolucao;
+            Loja.Instancia.espaco = this;
+            miniMenu.SetActive(true);
+            miniMenu.transform.position = Input.mousePosition + new Vector3(100,10); 
         }
         public void Gera(int n)
         {
-            var prefab = Loja.Instancia.GetPrefab(n);
-            var go = Instantiate(prefab);
+            canhao = Loja.Instancia.GetPrefab(n);
+            var go = Instantiate(canhao);
             go.transform.position = transform.position;
-            Destroy(gameObject);
+            stick = n;
+        }
+
+        public void Evoluir()
+        {
+            canhao.Melhorar();
         }
     }
 }

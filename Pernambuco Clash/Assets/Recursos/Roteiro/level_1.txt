@@ -1,65 +1,52 @@
-rapido::3
-rapido::1,5
-rapido::1,5
-rapido::1,5
-rapido::10
+rapido::0,5
+rapido::0,5
+rapido::0,5
+rapido::0,5
+rapido::5
 
 
 #horda 2
-rapido::3
-rapido::3
-simples::3
-rapido::3
-rapido::3
-simples::3
-rapido::3
-simples::3
-rapido::10
+rapido::0,3
+rapido::0,3
+pequeno::0,3
+rapido::0,3
+rapido::0,3
+pequeno::0,3
+rapido::0,3
+pequeno::0,3
+rapido::5
 
 
 #horda 3
-simples::2,5
-rapido::2,5
-rapido::2,5
-simples::2,5
-simples::2,5
-rapido::2,5
-rapido::2,5
-simples::2,5
-simples::2,5
-rapido::2,5
-simples::2,5
-simples::2,5
-rapido::2,5
-rapido::2,5
-simples::2,5
-simples::2,5
-rapido::2,5
-rapido::2,5
-simples::2,5
-simples::2,5
-rapido::2,5
-simples::2,5
+simples::0,3
+rapido::0,1
+pequeno::0,25
+simples::0,3
+simples::0,25
+pequeno::0,25
+rapido::0,25
+simples::0,25
+pequeno::0,25
+rapido::0,25
+simples::0,25
+pequeno::0,25
+rapido::0,25
+rapido::0,25
+simples::0,25
+pequeno::0,25
+rapido::0,25
+rapido::0,25
+simples::0,25
+pequeno::0,25
+rapido::0,25
+pequeno::0,25
 rapido::10
 
 
 
 #horda 4
-rapido::1,5
-rapido::1,5
-rapido::1,5
-rapido::1,5
-rapido::1,5
-rapido::1,5
-rapido::1,5
-rapido::1,5
-rapido::1,5
-rapido::1,5
-rapido::1,5
-rapido::1,5
-rapido::1,5
-rapido::1,5
-rapido::1,5
-rapido::1,5
-rapido::1,5
-rapido::1,5
+grande::1,5
+grande::1,5
+grande::1,5
+grande::1,5
+grande::1,5

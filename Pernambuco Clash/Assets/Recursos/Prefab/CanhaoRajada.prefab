@@ -95,15 +95,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 112b580f911b4dde81f32264251af4db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 0}
-  cadencia: 2
-  potencia: 2
-  alcance: 5
+  balaPrefab: {fileID: 6417300388645088828, guid: 2fb9a73703e59c24fbae8621605f1fe2, type: 3}
+  cadencia: 1.7
+  potencia: 2.1
+  alcance: 2
   tempo: 0
   nivelMaximo: 3
-  preco: 250
+  preco: 500
   crescimentoPreco: 250
   crescimentoDano: 0.1
-  cresimentoCadencia: 0
-  numero: 6
+  cresimentoCadencia: 0.3
+  anim: {fileID: 0}
+  numero: 9
   crescimentoNumero: 3

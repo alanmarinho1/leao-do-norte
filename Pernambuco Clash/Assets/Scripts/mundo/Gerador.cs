@@ -34,7 +34,15 @@ namespace mundo
 
         private void Update()
         {
-            if (index >= _instanciacao.Length) return;
+            if (index >= _instanciacao.Length)
+            {
+                if (GameObject.FindGameObjectsWithTag("Inimigo").Length == 0)
+                {
+                    //TODO chama proxima cena
+                }
+
+                return;
+            }
             if (!_instanciacao[index].tick()) return;
             ++index;
             Gerar();

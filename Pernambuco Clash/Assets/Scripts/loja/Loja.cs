@@ -4,6 +4,7 @@ using arma;
 using inimigo;
 using mundo;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace loja
 {
@@ -21,15 +22,34 @@ namespace loja
                 instancia = this;
         }
 
+        private void Start()
+        {
+            painelArma.SetActive(false);
+            painelEvolucao.SetActive(false);
+            
+        }
+        
+
         public static Loja Instancia => instancia;
 
         #endregion
+
+        public GameObject painelArma;
+        public GameObject painelEvolucao;
         public Canhao canhaoSimples;
         public Canhao canhaoRajada;
         public Canhao canhaoMetralhadora;
 
-        
-        
+        private const string conteudo = "Evoluir                ";
+        public EspacoArma espaco;
+        public Text texto;
+
+        public GameObject GetPainel(int n)
+        {
+            if (n == -1) return painelArma;
+            texto.text = conteudo + GetPrefab(n).preco;
+            return painelEvolucao;
+        }
         public Canhao GetPrefab(int n)
         {
             return n switch
@@ -48,6 +68,13 @@ namespace loja
             Base.Instancia.Grana = -prefab.preco;
             return true;
 
+        }
+        public bool Evoluir()
+        {
+            var prefab = espaco.canhao ? espaco.canhao : canhaoSimples;
+            if (Base.Instancia.Grana < prefab.preco) return false;
+            Base.Instancia.Grana = -prefab.preco;
+            return true;
         }
     }
 }

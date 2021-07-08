@@ -96,15 +96,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   balaPrefab: {fileID: 3831389071248717855, guid: e4e912d832bf6f54eb32f8aaf301e815, type: 3}
-  cadencia: 1.5
-  potencia: 1
-  alcance: 30
+  cadencia: 1
+  potencia: 1.5
+  alcance: 10
   tempo: 0
   nivelMaximo: 3
-  preco: 170
+  preco: 450
   crescimentoPreco: 50
   crescimentoDano: 1
   cresimentoCadencia: 0
+  anim: {fileID: 0}
   passo: 0.2
   cadenciaInicial: 1.5
   velocidadeMinima: 0.2

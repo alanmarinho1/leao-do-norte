@@ -31,8 +31,17 @@ namespace mundo
             var espaco = espacos.Where(e => e.MouseDentro(pos));
             if(!espaco.Any()) return;
             var esp = espaco.First();
-            if(esp.gameObject.activeInHierarchy)
+            var clicouMapa = true;
+            if (esp.gameObject.activeInHierarchy)
+            {
                 esp.Click();
+                clicouMapa = false;
+            }
+            if (!clicouMapa) return;
+            
+            Loja.Instancia.painelArma.SetActive(false);
+            Loja.Instancia.espaco = null;
+
         }
     }
 }

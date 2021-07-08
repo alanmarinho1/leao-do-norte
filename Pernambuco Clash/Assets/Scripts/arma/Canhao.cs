@@ -46,8 +46,7 @@ namespace arma
         protected bool Tick()
         {
             tempo -= Time.deltaTime;
-            if (tempo > 0) return false;
-            return true;
+            return (tempo <= 0);
         }
 
         protected bool ChecaAlvo()
@@ -119,7 +118,7 @@ namespace arma
 
         public void miraAlvo()
         {
-
+            if(anim == null) return;
             anim.ResetTrigger("CannonRightDown");
             anim.ResetTrigger("CannonRightUp");
             anim.ResetTrigger("CannonLeftDown");

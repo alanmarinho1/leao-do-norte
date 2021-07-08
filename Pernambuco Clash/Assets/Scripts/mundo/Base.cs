@@ -13,6 +13,7 @@ namespace mundo
     [RequireComponent(typeof(Gerador))]
     [RequireComponent(typeof(Controlador))]
     [RequireComponent(typeof(Loja))]
+    [RequireComponent(typeof(FabricaInimigo))]
     public class Base : MonoBehaviour
     {
         #region singleton
@@ -69,7 +70,7 @@ namespace mundo
         private void Start()
         {
             Grana = 0;
-            Time.timeScale = 3f;
+            //Time.timeScale = 3f;
         }
 
         public void AddInimigo(GameObject go)

@@ -2,21 +2,35 @@
 
 namespace loja
 {
-    public class EspacoMiniMenu : Espaco
+    public class EspacoMiniMenu :MonoBehaviour
     {
-        public int opcao;
-        public EspacoArma espaco;
-        public override void Click()
+        public void ComprarCanhao()
         {
-            Debug.Log("vc clicou para " + opcao);
-            if(Loja.Instancia.Comprar(opcao))
-                espaco.Gera(opcao);
-            else
-            {
-                Debug.Log("faltou grana cara");
-            }
-            espaco.Click();
+            Loja.Instancia.painelArma.SetActive(false);
+            if (!Loja.Instancia.Comprar(1)) return;
+            Loja.Instancia.espaco.Gera(1);
+            
+        }
+        public void ComprarMetralhadora(){
+            Loja.Instancia.painelArma.SetActive(false);
+            if (!Loja.Instancia.Comprar(2)) return;
+            Loja.Instancia.espaco.Gera(2);
+           }
+
+        public void ComprarMorteiro()
+        {
+            
+            if (!Loja.Instancia.Comprar(3)) return;
+            Loja.Instancia.espaco.Gera(3);
+            
         }
 
+        public void Evoluir()
+        {
+            Loja.Instancia.painelEvolucao.SetActive(false);
+            if (!Loja.Instancia.Evoluir()) return;
+            Loja.Instancia.espaco.Evoluir();
+            
+        }
     }
 }

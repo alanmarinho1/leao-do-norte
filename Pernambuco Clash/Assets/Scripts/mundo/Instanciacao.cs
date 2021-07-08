@@ -15,9 +15,10 @@ namespace mundo
 
         public Instanciacao(string str)
         {
+            Debug.Log(str);
             var partes = str.Split(new []{"::"},StringSplitOptions.RemoveEmptyEntries);
             tempo = float.Parse(partes[1]);
-            prefab = FabaricaInimigo.Instancia.GetInimigo(partes[0]).gameObject;
+            prefab = FabricaInimigo.Instancia.GetInimigo(partes[0]).gameObject;
             // Debug.Log(tempo + "");
         }
         
