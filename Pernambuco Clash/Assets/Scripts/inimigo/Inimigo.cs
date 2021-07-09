@@ -12,7 +12,7 @@ namespace inimigo
     {
         #region campos
         #region privadas
-        
+
         private GameObject alvo;
         private NavMeshAgent _navMeshAgent;
 
@@ -48,7 +48,7 @@ namespace inimigo
                 //Debug.Log("vida =" + vidaAtual);
 
                 var vec = barraVida.transform.localScale;
-                barraVida.transform.localScale = new Vector3(vidaAtual / vidaMaxima, vec.y, vec.z );
+                barraVida.transform.localScale = new Vector3(vidaAtual / vidaMaxima, vec.y, vec.z);
             }
         }
         public float Velocidade
@@ -71,7 +71,7 @@ namespace inimigo
                 if (defesaAtual <= 0) defesaAtual = 0;
             }
         }
-        
+
         #endregion
 
         #endregion
@@ -99,23 +99,26 @@ namespace inimigo
         }
 
         #endregion
-        
+
         protected void Update()
         {
             _navMeshAgent.speed = velocidadeAtual;
             _navMeshAgent.SetDestination(alvo.transform.position);
             UpdateAdicional();
-            soldierMove();            
+            soldierMove();
         }
 
-        
+
         private void Morrer()
         {
             AoMorrer();
             if (!(vidaAtual <= 0)) return;
+            anim.SetBool("IsDead", true);
+
             Base.Instancia.Grana = recompensa;
             Base.Instancia.Inimigos.Remove(gameObject);
-            Destroy(gameObject);
+            
+            Destroy(gameObject, 0.4f);
         }
 
         private void OnCollisionEnter2D(Collision2D other)
@@ -129,7 +132,7 @@ namespace inimigo
             Destroy(go);
         }
 
-        protected void UpdateAdicional(){}
+        protected void UpdateAdicional() { }
 
         protected void soldierMove()
         {
@@ -142,22 +145,22 @@ namespace inimigo
             anim.ResetTrigger("Up");
 
             if (transform.position.x < -1 && transform.position.y > 0.47) anim.SetTrigger("RightDown"); // comparar com posicao do canhao
-            
+
             if (transform.position.x < -1 && transform.position.y < 0.47) anim.SetTrigger("RightUp"); // comparar com posicao do canhao
-            
+
             if (transform.position.x > 1 && transform.position.x < 3 && transform.position.y > 0.47) anim.SetTrigger("LeftDown"); // comparar com posicao do canhao
 
             if (transform.position.x > 1 && transform.position.x < 3 && transform.position.y < 0.47) anim.SetTrigger("LeftUp");// comparar com posicao do canhao
-            
+
             if (transform.position.x > -1 && transform.position.x < 1 && transform.position.y > 0.47) anim.SetTrigger("Down"); // comparar com posicao do canhao
-            
+
             if (transform.position.x > -1 && transform.position.x < 1 && transform.position.y < 0.47) anim.SetTrigger("Up"); // comparar com posicao do canhao
-            
+
             if (transform.position.x > 3 && transform.position.x < 6.2) anim.SetTrigger("RightDown");
-            
+
             if (transform.position.x > 6.2)
             {
-                _navMeshAgent.speed = 0;                
+                _navMeshAgent.speed = 0;
                 anim.SetTrigger("RightDown");
             }
         }

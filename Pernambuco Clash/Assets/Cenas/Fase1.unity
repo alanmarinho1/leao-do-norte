@@ -13664,6 +13664,26 @@ MonoBehaviour:
   tipo: 
   tempoVida: 0
   fixo: 0
+--- !u!95 &649131234 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5480776885360873451, guid: 70bdcb6630435234f8510c4d828715f1, type: 3}
+  m_PrefabInstance: {fileID: 2642855022017330085}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &649131241
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649131232}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: bd07ea1a3de9cc24a99164d19d6c5bd8, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &683280116
 GameObject:
   m_ObjectHideFlags: 0
@@ -16926,11 +16946,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1324781970203902373, guid: 43cf9580ed408e8419f98f1155e70fbe, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -64.002
+      value: -64.002014
       objectReference: {fileID: 0}
     - target: {fileID: 1324781970203902373, guid: 43cf9580ed408e8419f98f1155e70fbe, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 6.0002
+      value: 6.0002136
       objectReference: {fileID: 0}
     - target: {fileID: 1324781970203902373, guid: 43cf9580ed408e8419f98f1155e70fbe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -17054,6 +17074,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2642855020738979204, guid: 70bdcb6630435234f8510c4d828715f1, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 649131234}
     - target: {fileID: 2642855020738979204, guid: 70bdcb6630435234f8510c4d828715f1, type: 3}
       propertyPath: dano
       value: 2
