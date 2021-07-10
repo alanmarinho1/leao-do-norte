@@ -48,3 +48,4 @@ MonoBehaviour:
   inimigoPequeno: {fileID: 3890782131948917345, guid: 551fafc7324826b4f95c3eb41736b6e6, type: 3}
   inimigoRapido: {fileID: 5540851175848365275, guid: 9304ae15821a389499025abbfde544ad, type: 3}
   inimigoChefe: {fileID: 0}
+  inimigoShip: {fileID: 5487103367140373858, guid: 0ab97c3c2c587784b88b4c2b7a06cdf2, type: 3}

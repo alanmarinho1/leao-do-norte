@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4753815745831419660}
   - component: {fileID: 489091087979989446}
   - component: {fileID: 1383418311486138989}
+  - component: {fileID: 8310706909695882276}
   m_Layer: 0
   m_Name: CanhaoMetralhadora
   m_TagString: Untagged
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2747690628134850419, guid: 16037dbd798344f57a526d53d48f5ead, type: 3}
+  m_Sprite: {fileID: 5621822056772760809, guid: 75b0319034f9ed549b4c9be5aba11c04, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -111,3 +112,22 @@ MonoBehaviour:
   velocidadeMinima: 0.2
   crescimentoPasso: 0.15
   crescimentoMinimo: 0.05
+--- !u!95 &8310706909695882276
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3615777947641675558}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 85beef7f07bdc8a489da307ee2c4c03e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

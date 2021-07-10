@@ -507,7 +507,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &271112916
 GameObject:
@@ -553,7 +553,7 @@ Transform:
   - {fileID: 1921880982}
   - {fileID: 1048646226}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &325634298
 GameObject:
@@ -652,7 +652,7 @@ RectTransform:
   - {fileID: 1290373350}
   - {fileID: 1695737784}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -759,7 +759,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8408648460900732979, guid: 627ab701b92e1ec49a0690dc4343a5de, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.47
+      value: -2.51
       objectReference: {fileID: 0}
     - target: {fileID: 8408648460900732979, guid: 627ab701b92e1ec49a0690dc4343a5de, type: 3}
       propertyPath: m_LocalPosition.z
@@ -928,7 +928,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &508312610
 GameObject:
@@ -1200,7 +1200,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &671947459
 GameObject:
@@ -1245,7 +1245,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &815792442
 GameObject:
@@ -1404,7 +1404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8408648460900732979, guid: 627ab701b92e1ec49a0690dc4343a5de, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8408648460900732979, guid: 627ab701b92e1ec49a0690dc4343a5de, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1477,7 +1477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8408648460900732979, guid: 627ab701b92e1ec49a0690dc4343a5de, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8408648460900732979, guid: 627ab701b92e1ec49a0690dc4343a5de, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1518,6 +1518,14 @@ PrefabInstance:
     - target: {fileID: 8408648461142844257, guid: 627ab701b92e1ec49a0690dc4343a5de, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408648461142844258, guid: 627ab701b92e1ec49a0690dc4343a5de, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.8762885
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408648461142844258, guid: 627ab701b92e1ec49a0690dc4343a5de, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.543
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 627ab701b92e1ec49a0690dc4343a5de, type: 3}
@@ -8409,7 +8417,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1181299809
 PrefabInstance:
@@ -9019,7 +9027,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1597753500
 GameObject:
@@ -9106,7 +9114,7 @@ Transform:
   m_LocalScale: {x: 0.8755672, y: 0.95683676, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1597753503
 MonoBehaviour:
@@ -9153,7 +9161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   local: {fileID: 1129584727}
   index: 0
-  caminho: level_1.txt
+  caminho: level_2.txt
   _instanciacao: []
 --- !u!114 &1597753506
 MonoBehaviour:
@@ -9189,6 +9197,7 @@ MonoBehaviour:
   inimigoPequeno: {fileID: 3890782131948917345, guid: 551fafc7324826b4f95c3eb41736b6e6, type: 3}
   inimigoRapido: {fileID: 5540851175848365275, guid: 9304ae15821a389499025abbfde544ad, type: 3}
   inimigoChefe: {fileID: 0}
+  inimigoShip: {fileID: 4332380072572855315, guid: 4f0baab65b3dd0d46ad88973adf48f0b, type: 3}
 --- !u!1 &1638619518
 GameObject:
   m_ObjectHideFlags: 0

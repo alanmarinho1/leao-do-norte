@@ -32,6 +32,7 @@ namespace arma
 
         private void Update()
         {
+            miraCannon();
             if (!Tick()) return;
             if (ChecaAlvo()){
                 miraAlvo();
@@ -139,5 +140,27 @@ namespace arma
 
             if (alvo.transform.position.x > -1 && alvo.transform.position.x < 1 && alvo.transform.position.y < 0) anim.SetTrigger("CannonDown");
         }
+
+        public void miraCannon() // Para 3-cannon (metralhadora) e pelotao de artilharia (rajada)
+        {
+            if (anim == null) return;
+            /*anim.ResetTrigger("cannonRight");            
+            anim.ResetTrigger("cannonLeft");
+            anim.ResetTrigger("cannonDown");
+            anim.ResetTrigger("cannonUp");*/
+            
+
+            if (this.transform.position.y > 3.5) anim.SetTrigger("cannonDown");
+
+            if (this.transform.position.x > -7 && this.transform.position.x < -6 || this.transform.position.y < -2) anim.SetTrigger("cannonUp");
+
+            //if (this.transform.position.y < -2.5 || this.transform.position.x == -6.49) anim.SetTrigger("cannonUp");
+
+            if (this.transform.position.x > 6 || (this.transform.position.x > 3 && this.transform.position.x < 3.5)) anim.SetTrigger("cannonLeft");
+
+            if ((this.transform.position.x < 3.5) || (this.transform.position.x > 3.5 && this.transform.position.x < 5)) anim.SetTrigger("cannonRight");
+
+        }
+
     }
 }

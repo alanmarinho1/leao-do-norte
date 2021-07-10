@@ -7,6 +7,7 @@
         public float velocidadeMinima;
         public float crescimentoPasso;
         public float crescimentoMinimo;
+
         protected override void Dispara()
         {
             var go = Instantiate(balaPrefab);
@@ -39,5 +40,6 @@
             if (cadenciaInicial <= 0)
                 cadenciaInicial = 0.1f;
         }
+        
     }
 }

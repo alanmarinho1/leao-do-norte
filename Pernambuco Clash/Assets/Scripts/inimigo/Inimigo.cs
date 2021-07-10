@@ -106,6 +106,7 @@ namespace inimigo
             _navMeshAgent.SetDestination(alvo.transform.position);
             UpdateAdicional();
             soldierMove();
+            shipMove();
         }
 
 
@@ -158,11 +159,27 @@ namespace inimigo
 
             if (transform.position.x > 3 && transform.position.x < 6.2) anim.SetTrigger("RightDown");
 
-            if (transform.position.x > 6.2)
+            /*if (transform.position.x > 6.2)
             {
                 _navMeshAgent.speed = 0;
                 anim.SetTrigger("RightDown");
-            }
+            }*/
+        }
+
+        protected void shipMove()
+        {
+
+            anim.ResetTrigger("down");
+            anim.ResetTrigger("right");
+            anim.ResetTrigger("left");
+            anim.ResetTrigger("up");
+
+            if (transform.position.x > -12 && transform.position.x < -4.5 || transform.position.x > -3.8 && transform.position.x < -0.5 || transform.position.x > 0.3 && transform.position.x < 4.9 || transform.position.x > 5.8) anim.SetTrigger("right");
+
+            if (transform.position.x > -4.5 && transform.position.x < -3.8 || transform.position.x > 4.9 && transform.position.x < 5.8) anim.SetTrigger("down");
+            
+            if (transform.position.x > -0.5 && transform.position.x < 0.3) anim.SetTrigger("up");
+
         }
     }
 }

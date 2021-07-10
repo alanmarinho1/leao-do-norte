@@ -11,6 +11,7 @@ namespace arma
         public int numero;
 
         public int crescimentoNumero;
+
         protected override void Dispara()
         {
             for (var i = 0; i < numero; i++)
