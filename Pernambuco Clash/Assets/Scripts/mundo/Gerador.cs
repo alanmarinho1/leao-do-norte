@@ -3,7 +3,10 @@ using System.IO;
 using System.Linq;
 using inimigo;
 using Unity.Collections;
+using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace mundo
 {
@@ -24,6 +27,9 @@ namespace mundo
         [ReadOnly]
         public Instanciacao[] _instanciacao;
 
+        public string cena; 
+        public GameObject texto;
+
         
         private void Start()
         {
@@ -32,13 +38,19 @@ namespace mundo
             Gerar();
         }
 
+        IEnumerator Esperar() {
+            yield return new WaitForSeconds(5);
+            SceneManager.LoadScene(cena);
+        }
+
         private void Update()
         {
             if (index >= _instanciacao.Length)
             {
                 if (GameObject.FindGameObjectsWithTag("Inimigo").Length == 0)
                 {
-                    //TODO chama proxima cena
+                    texto.SetActive(true);
+                    StartCoroutine("Esperar");
                 }
 
                 return;

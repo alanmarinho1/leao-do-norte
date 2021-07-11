@@ -18,11 +18,6 @@ public class ControleCenas : MonoBehaviour
             instance = this;
     }
 
-    void Start()
-    {
-       
-    }
-
     void Update()
     {
         
