@@ -14207,6 +14207,7 @@ MonoBehaviour:
   inimigoPequeno: {fileID: 0}
   inimigoRapido: {fileID: 0}
   inimigoChefe: {fileID: 0}
+  inimigoShip: {fileID: 0}
 --- !u!1 &887013078
 GameObject:
   m_ObjectHideFlags: 0
@@ -14217,6 +14218,7 @@ GameObject:
   m_Component:
   - component: {fileID: 887013080}
   - component: {fileID: 887013079}
+  - component: {fileID: 887013081}
   m_Layer: 0
   m_Name: ProxTela
   m_TagString: Untagged
@@ -14237,6 +14239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   opcoes: {fileID: 93199129}
+  cena: 
   paused: 0
 --- !u!4 &887013080
 Transform:
@@ -14252,6 +14255,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &887013081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887013078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50b747f73188240448985717aa500132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cena: Fase1para2
+  tempo: 0
 --- !u!1001 &999906690
 PrefabInstance:
   m_ObjectHideFlags: 0

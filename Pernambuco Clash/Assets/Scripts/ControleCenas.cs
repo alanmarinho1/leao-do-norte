@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class ControleCenas : MonoBehaviour
 {
     public static ControleCenas instance;
     public GameObject opcoes;
+    public string cena;
     public bool paused = false;
+    
 
     private void Awake()
     {
@@ -17,12 +20,12 @@ public class ControleCenas : MonoBehaviour
 
     void Start()
     {
-
+       
     }
 
     void Update()
     {
-
+        
     }
 
     public void PauseAndResumeGame()
@@ -48,7 +51,7 @@ public class ControleCenas : MonoBehaviour
 
     public void NovoJogoScene()
     {
-        SceneManager.LoadScene("Fase1");
+        SceneManager.LoadScene("Abertura");
     }
 
     public void SairDoJogo()
@@ -69,5 +72,10 @@ public class ControleCenas : MonoBehaviour
     public void GameOverScene()
     {
         SceneManager.LoadScene("Tela Game Over");
+    }
+
+    public void ProxFase()
+    {
+        SceneManager.LoadScene(cena);
     }
 }

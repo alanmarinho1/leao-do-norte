@@ -9,11 +9,20 @@ EditorBuildSettings:
     path: Assets/Cenas/Menu Principal.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Cenas/Abertura.unity
+    guid: 16d4dabc319dc8946b3e5dbd00803afb
+  - enabled: 1
     path: Assets/Cenas/Fase1.unity
     guid: 7846ea77b797646478626d33f20dbb30
   - enabled: 1
+    path: Assets/Cenas/Fase1para2.unity
+    guid: 5eece4cbd4ba49642af448da06b0d8fd
+  - enabled: 1
     path: Assets/Cenas/Fase2.unity
     guid: 131e770bb5631444084bf781df0f17ea
+  - enabled: 1
+    path: Assets/Cenas/Fase2paraboss.unity
+    guid: b620aaa55371ad64a96e9ac0ec9b8644
   - enabled: 1
     path: Assets/Cenas/Boss.unity
     guid: b3fe30c38f7ce0c46b4fc903d12ca05e
