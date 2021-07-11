@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2642855020497006219, guid: 70bdcb6630435234f8510c4d828715f1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2642855020738979200, guid: 70bdcb6630435234f8510c4d828715f1, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 1.16
@@ -29,15 +33,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2642855020738979201, guid: 70bdcb6630435234f8510c4d828715f1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.6242104
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2642855020738979201, guid: 70bdcb6630435234f8510c4d828715f1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.1805305
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2642855020738979201, guid: 70bdcb6630435234f8510c4d828715f1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2642855020738979201, guid: 70bdcb6630435234f8510c4d828715f1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -73,20 +77,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2642855020738979204, guid: 70bdcb6630435234f8510c4d828715f1, type: 3}
       propertyPath: vidaMaxima
-      value: 50
+      value: 0.00000012905873
       objectReference: {fileID: 0}
     - target: {fileID: 2642855020738979204, guid: 70bdcb6630435234f8510c4d828715f1, type: 3}
       propertyPath: velocidadeBase
-      value: 1.3
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2642855020738979205, guid: 70bdcb6630435234f8510c4d828715f1, type: 3}
       propertyPath: m_Name
-      value: warShip
+      value: warShip 1
       objectReference: {fileID: 0}
     - target: {fileID: 2642855020738979206, guid: 70bdcb6630435234f8510c4d828715f1, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 7578421156242418236, guid: 8a866c349eba5684ea979b9b2cd23714, type: 3}
+    - target: {fileID: 2642855020738979207, guid: 70bdcb6630435234f8510c4d828715f1, type: 3}
+      propertyPath: m_Speed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5480776885360873451, guid: 70bdcb6630435234f8510c4d828715f1, type: 3}
       propertyPath: m_Controller
       value: 

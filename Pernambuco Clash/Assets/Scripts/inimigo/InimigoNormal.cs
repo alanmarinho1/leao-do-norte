@@ -16,6 +16,7 @@ namespace inimigo
             Vida = dano;
         }
 
-        protected new void UpdateAdicional() {}
+        protected override void UpdateAdicional() {}
+        protected override void StartAdicional(){}
     }
 }

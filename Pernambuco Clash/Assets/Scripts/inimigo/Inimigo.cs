@@ -28,6 +28,7 @@ namespace inimigo
         public float recompensa;
         public float dano;
         public float defesaBase;
+        public float porcentagemVida = 1f;
         public GameObject barraVida;
         public Animator anim;
 
@@ -36,19 +37,17 @@ namespace inimigo
             get => vidaAtual;
             set
             {
-                //Debug.Log("com" + vidaAtual + ", daninho de " + value);
                 vidaAtual -= value;
-                //Debug.Log("vida =" + vidaAtual);
                 if (vidaAtual >= vidaMaxima) vidaAtual = vidaMaxima;
                 if (vidaAtual < 0)
                 {
                     vidaAtual = 0;
+                    porcentagemVida = 0f;
                     Morrer();
                 }
-                //Debug.Log("vida =" + vidaAtual);
-
                 var vec = barraVida.transform.localScale;
-                barraVida.transform.localScale = new Vector3(vidaAtual / vidaMaxima, vec.y, vec.z);
+                porcentagemVida = vidaAtual / vidaMaxima;
+                barraVida.transform.localScale = new Vector3(porcentagemVida, vec.y, vec.z);
             }
         }
         public float Velocidade
@@ -59,6 +58,9 @@ namespace inimigo
                 velocidadeAtual -= value;
                 if (velocidadeAtual >= velocidadeBase) velocidadeAtual = velocidadeBase;
                 if (velocidadeAtual <= 0) velocidadeAtual = 0;
+                if (_navMeshAgent == null)
+                    _navMeshAgent = GetComponent<NavMeshAgent>();
+                _navMeshAgent.speed = velocidadeAtual;
             }
         }
         public float Defesa
@@ -96,17 +98,21 @@ namespace inimigo
             anim = GetComponent<Animator>();
             vidaAtual = vidaMaxima;
             Vida = 0;
+            StartAdicional();
         }
 
         #endregion
 
         protected void Update()
         {
-            _navMeshAgent.speed = velocidadeAtual;
             _navMeshAgent.SetDestination(alvo.transform.position);
             UpdateAdicional();
-            soldierMove();
-            shipMove();
+            if (anim != null)
+            {
+                soldierMove();
+                shipMove();
+            }
+            
         }
 
 
@@ -133,7 +139,8 @@ namespace inimigo
             Destroy(go);
         }
 
-        protected void UpdateAdicional() { }
+        protected abstract void UpdateAdicional();
+        protected abstract void StartAdicional();
 
         protected void soldierMove()
         {
