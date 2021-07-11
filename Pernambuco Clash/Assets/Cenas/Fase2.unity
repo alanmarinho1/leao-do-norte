@@ -9197,7 +9197,7 @@ MonoBehaviour:
   inimigoPequeno: {fileID: 3890782131948917345, guid: 551fafc7324826b4f95c3eb41736b6e6, type: 3}
   inimigoRapido: {fileID: 5540851175848365275, guid: 9304ae15821a389499025abbfde544ad, type: 3}
   inimigoChefe: {fileID: 0}
-  inimigoShip: {fileID: 4332380072572855315, guid: 4f0baab65b3dd0d46ad88973adf48f0b, type: 3}
+  inimigoShip: {fileID: 4332380072572855315, guid: 48a9e981770fa7e46848f2464fedcd8e, type: 3}
 --- !u!1 &1638619518
 GameObject:
   m_ObjectHideFlags: 0

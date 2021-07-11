@@ -77,11 +77,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2642855020738979204, guid: 70bdcb6630435234f8510c4d828715f1, type: 3}
       propertyPath: vidaMaxima
-      value: 0.00000012905873
+      value: 0.00000001433986
       objectReference: {fileID: 0}
     - target: {fileID: 2642855020738979204, guid: 70bdcb6630435234f8510c4d828715f1, type: 3}
       propertyPath: velocidadeBase
-      value: 30
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2642855020738979205, guid: 70bdcb6630435234f8510c4d828715f1, type: 3}
       propertyPath: m_Name
