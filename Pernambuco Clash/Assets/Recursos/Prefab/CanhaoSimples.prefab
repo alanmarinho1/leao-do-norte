@@ -97,8 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   balaPrefab: {fileID: 3831389071248717855, guid: e4e912d832bf6f54eb32f8aaf301e815, type: 3}
-  cadencia: 1.3999999
-  potencia: 2.5
+  cadencia: 0.9999998
+  potencia: 3.5
   alcance: 3
   tempo: 0
   nivelMaximo: 3
