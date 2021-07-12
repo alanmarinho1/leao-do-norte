@@ -102,7 +102,7 @@ MonoBehaviour:
   alcance: 3
   tempo: 0
   nivelMaximo: 3
-  preco: 500
+  preco: 200
   crescimentoPreco: 100
   crescimentoDano: 0.5
   cresimentoCadencia: 0.2

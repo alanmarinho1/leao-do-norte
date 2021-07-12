@@ -77,7 +77,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2642855020738979204, guid: 70bdcb6630435234f8510c4d828715f1, type: 3}
       propertyPath: vidaMaxima
-      value: 0.00000001433986
+      value: 0.0000000015933178
       objectReference: {fileID: 0}
     - target: {fileID: 2642855020738979204, guid: 70bdcb6630435234f8510c4d828715f1, type: 3}
       propertyPath: velocidadeBase

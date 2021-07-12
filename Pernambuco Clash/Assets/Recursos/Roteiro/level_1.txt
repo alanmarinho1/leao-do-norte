@@ -27,15 +27,8 @@ pequeno::0,25
 rapido::0,25
 simples::0,25
 pequeno::0,25
-rapido::0,25
 simples::0,25
 pequeno::0,25
-rapido::0,25
-rapido::0,25
-simples::0,25
-pequeno::0,25
-rapido::0,25
-rapido::0,25
 simples::0,25
 pequeno::0,25
 rapido::0,25
@@ -46,7 +39,11 @@ rapido::10
 
 #horda 4
 grande::1,5
+rapido::0,25
 grande::1,5
 grande::1,5
+rapido::0,25
 grande::1,5
+grande::1,5
+rapido::0,25
 grande::1,5

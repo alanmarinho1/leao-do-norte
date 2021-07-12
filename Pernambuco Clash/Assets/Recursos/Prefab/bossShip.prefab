@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce72ef887a7a4abf962e8de82230363c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaMaxima: 5000
+  vidaMaxima: 4000
   velocidadeBase: 0.2
   recompensa: 100000000
   dano: 0
